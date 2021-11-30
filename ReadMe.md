@@ -20,5 +20,6 @@ The two most popular techniques for scaling numerical data prior to modeling are
 
 ![](https://i.imgur.com/IfHYmM2.png)
 
+# Purpose of machine learning models
 
 > Machine learning models learn a mapping from input variables to an output variable.
