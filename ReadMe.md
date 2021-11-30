@@ -19,3 +19,6 @@ The two most popular techniques for scaling numerical data prior to modeling are
 ## standard deviatin bigger when difference are big
 
 ![](https://i.imgur.com/IfHYmM2.png)
+
+
+> Machine learning models learn a mapping from input variables to an output variable.
