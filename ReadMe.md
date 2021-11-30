@@ -28,3 +28,35 @@ The two most popular techniques for scaling numerical data prior to modeling are
 # Data Normalization
 
 > Normalization is a rescaling of the data from the original range so that all values are within the new range of 0 and 1.
+
+A value is normalized as follows:
+
+   y = (x – min) / (max – min)
+   
+For example, for a dataset, we could guesstimate the min and max observable values as 30 and -10. We can then normalize any value, like 18.8, as follows:
+
+  y = (x – min) / (max – min)
+  y = (18.8 – (-10)) / (30 – (-10))
+  y = 28.8 / 40
+  y = 0.72
+  
+You can normalize your dataset using the `scikit-learn` object `MinMaxScaler`
+
+
+## Example of normalization
+
+  # example of a normalization
+  from numpy import asarray
+  from sklearn.preprocessing import MinMaxScaler
+  # define data
+  data = asarray([[100, 0.001],
+          [8, 0.05],
+          [50, 0.005],
+          [88, 0.07],
+          [4, 0.1]])
+  print(data)
+  # define min max scaler
+  scaler = MinMaxScaler()
+  # transform data
+  scaled = scaler.fit_transform(data)
+  print(scaled)
