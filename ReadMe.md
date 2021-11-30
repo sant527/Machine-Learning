@@ -7,3 +7,7 @@ The two most popular techniques for scaling numerical data prior to modeling are
 # Standard Deviation and variance
 
 ![](https://i.imgur.com/zO0MQki.png)
+
+## using standard deviation
+
+![](https://i.imgur.com/dVxXrkI.png)
