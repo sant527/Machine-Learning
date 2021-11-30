@@ -101,3 +101,71 @@ We can guesstimate a mean of 10.0 and a standard deviation of about 5.0. Using t
 The mean and standard deviation estimates of a dataset can be more robust to new data than the minimum and maximum.
 
 You can standardize your dataset using the scikit-learn object StandardScaler.
+
+## Example
+
+      # example of a standardization
+      from numpy import asarray
+      from sklearn.preprocessing import StandardScaler
+      # define data
+      data = asarray([[100, 0.001],
+                  [8, 0.05],
+                  [50, 0.005],
+                  [88, 0.07],
+                  [4, 0.1]])
+      print(data)
+      # define standard scaler
+      scaler = StandardScaler()
+      # transform data
+      scaled = scaler.fit_transform(data)
+      print(scaled)
+      
+We can see that the mean value in each column is assigned a value of 0.0 if present and the values are centered around 0.0 with values both positive and negative.
+
+      [[1.0e+02 1.0e-03]
+       [8.0e+00 5.0e-02]
+       [5.0e+01 5.0e-03]
+       [8.8e+01 7.0e-02]
+       [4.0e+00 1.0e-01]]
+      [[ 1.26398112 -1.16389967]
+       [-1.06174414  0.12639634]
+       [ 0.         -1.05856939]
+       [ 0.96062565  0.65304778]
+       [-1.16286263  1.44302493]]
+       
+       
+# Q. Should I Normalize or Standardize?
+
+Predictive modeling problems can be complex, and it may not be clear how to best scale input data.
+
+If in doubt, normalize the input sequence. If you have the resources, explore modeling with the raw data, standardized data, and normalized data and see if there is a beneficial difference in the performance of the resulting model.
+
+
+# preprocessing data
+
+The following subjects will be handled:
+      Missing values
+      Polynomial features
+      Categorical features
+      Numerical features
+      Custom transformations
+      Feature scaling
+      Normalization
+      
+Note that step three and four can be performed interchangeable, since these transformations should be executed independently of each other.
+
+
+## missing values
+
+      import numpy as np
+      import pandas as pd
+      X = pd.DataFrame(
+          np.array([5,7,8, np.NaN, np.NaN, np.NaN, -5,
+                    0,25,999,1,-1, np.NaN, 0, np.NaN])\
+                    .reshape((5,3)))
+      X.columns = ['f1', 'f2', 'f3'] #feature 1, feature 2, feature 3
+      
+      
+![](https://i.imgur.com/N0s96b8.png)
+
+
