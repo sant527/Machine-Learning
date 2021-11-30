@@ -23,3 +23,8 @@ The two most popular techniques for scaling numerical data prior to modeling are
 # Purpose of machine learning models
 
 > Machine learning models learn a mapping from input variables to an output variable.
+
+
+# Data Normalization
+
+> Normalization is a rescaling of the data from the original range so that all values are within the new range of 0 and 1.
