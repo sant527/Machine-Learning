@@ -11,3 +11,7 @@ The two most popular techniques for scaling numerical data prior to modeling are
 ## using standard deviation
 
 ![](https://i.imgur.com/dVxXrkI.png)
+
+## standard deviation (normal, extra large, extra small)
+
+![](https://i.imgur.com/3cfSC9b.png)
